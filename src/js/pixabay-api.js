@@ -15,15 +15,7 @@ export function getImagesByQuery(query) {
     safesearch: true,
   })
   return axios
-    .get(BASE_URL, {
-      params: {
-        key: myApiKey,
-        q: query,
-        image_type: "photo",
-        orientation: "horizontal",
-        safesearch: true,
-      }
-    })
+    .get(BASE_URL, { params })
     .then(response => response.data) 
     .catch(error => error.message)
 };

@@ -27,7 +27,6 @@ form.addEventListener("submit", (e) => {
       if (data.hits.length === 0) {
         throw new Error("Error");
       }
-      hideLoader()
       createGallery(data.hits)
     })
     .catch(() =>
